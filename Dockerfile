@@ -18,6 +18,9 @@ RUN ln -s /opt/activator/activator-1.2.10-minimal/activator /bin/activator
 RUN cd /tmp && activator new sample play-scala
 RUN cd /tmp/sample && activator dist
 
+# install tutum.co client
+RUN pip install tutum --pre
+
 # housekeeping
 RUN cd /
 RUN rm -rf /tmp/sample
